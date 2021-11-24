@@ -22,9 +22,8 @@ class MyApp extends StatelessWidget {
               width: 100,
               height: 100,
             ),
-            Positioned(
-              top: 25,
-              left: 25,
+            Align(
+              alignment: Alignment.center,
               child: Icon(Icons.verified),
             )
           ],
