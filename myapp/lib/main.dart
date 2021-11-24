@@ -16,12 +16,18 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter is Fun!'),
         ),
         body: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Icon(Icons.backpack),
-            Icon(Icons.leaderboard),
-            Icon(Icons.person),
+            Expanded(flex: 5, child: Icon(Icons.backpack)),
+            Flexible(
+              flex: 1,
+              child: Icon(Icons.leaderboard),
+            ),
+            Flexible(
+              flex: 1,
+              child: Icon(Icons.person),
+            ),
           ],
         ),
       ),
