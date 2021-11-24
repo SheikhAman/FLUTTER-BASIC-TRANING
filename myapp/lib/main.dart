@@ -15,12 +15,12 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.green, // appbar
           title: Text('Flutter is Fun!'),
         ),
-        body: Center(
-          child: SizedBox(
-            height: 50, // fixed width  and height
-            width: 50,
-            child: Text('Hi Hello'),
-          ),
+        body: Column(
+          children: [
+            Icon(Icons.backpack),
+            Icon(Icons.leaderboard),
+            Icon(Icons.person),
+          ],
         ),
       ),
     );
