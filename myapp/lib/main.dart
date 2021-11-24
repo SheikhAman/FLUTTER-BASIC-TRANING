@@ -13,6 +13,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final img =
+      'https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,17 +23,15 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.green, // appbar
           title: Text('Flutter is Fun!'),
         ),
-        body: ElevatedButton(
-          child: Text('Navigate'),
+        body: IconButton(
           onPressed: () {
-            print('clicked');
             Navigator.push(
               context,
-              MaterialPageRoute(
-                builder: (context) => AboutScreen(),
-              ),
+              MaterialPageRoute(builder: (context) => AboutScreen()),
             );
           },
+          icon: Hero(tag: img, child: Image.network(img)),
+          iconSize: 50,
         ),
       ),
     );
