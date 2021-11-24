@@ -15,19 +15,14 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.green, // appbar
           title: Text('Flutter is Fun!'),
         ),
-        body: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.end,
+        body: Stack(
           children: [
-            Expanded(flex: 5, child: Icon(Icons.backpack)),
-            Flexible(
-              flex: 1,
-              child: Icon(Icons.leaderboard),
+            Container(
+              color: Colors.red,
+              width: 100,
+              height: 100,
             ),
-            Flexible(
-              flex: 1,
-              child: Icon(Icons.person),
-            ),
+            Icon(Icons.verified),
           ],
         ),
       ),
