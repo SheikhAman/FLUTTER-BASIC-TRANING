@@ -11,31 +11,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.green, // appbar
-          title: Text('Flutter is Fun!'),
-        ),
-        body: ListView(
-          scrollDirection: Axis.horizontal,
-          children: [
-            Container(
-              color: Colors.blue,
-              width: 500,
-              height: 500,
-            ),
-            Container(
+          appBar: AppBar(
+            backgroundColor: Colors.green, // appbar
+            title: Text('Flutter is Fun!'),
+          ),
+          body: ListView.builder(itemBuilder: (_, index) {
+            return Container(
               color: Colors.red,
-              width: 500,
               height: 500,
-            ),
-            Container(
-              color: Colors.green,
               width: 500,
-              height: 500,
-            )
-          ],
-        ),
-      ),
+            );
+          })),
     );
   }
 }
