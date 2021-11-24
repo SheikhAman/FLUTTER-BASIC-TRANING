@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter is Fun!'),
         ),
         body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Icon(Icons.backpack),
             Icon(Icons.leaderboard),
