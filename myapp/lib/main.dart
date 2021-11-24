@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.green, // appbar
           title: Text('Flutter is Fun!'),
         ),
-        body: Column(
+        body: Row(
           children: [
             Icon(Icons.backpack),
             Icon(Icons.leaderboard),
