@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'about.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int count = 0;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,15 +21,17 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Colors.green, // appbar
           title: Text('Flutter is Fun!'),
         ),
-        floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.add),
-            onPressed: () {
-              setState(() {
-                count++;
-              });
-            }),
-        body: Center(
-          child: Text('$count'),
+        body: ElevatedButton(
+          child: Text('Navigate'),
+          onPressed: () {
+            print('clicked');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AboutScreen(),
+              ),
+            );
+          },
         ),
       ),
     );
